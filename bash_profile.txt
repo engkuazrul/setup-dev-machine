@@ -1,0 +1,68 @@
+ Host Name
+HOST_NAME=engkuazrul
+# Java Path
+JAVA_HOME=$(/usr/libexec/java_home)
+
+
+# Path
+export PATH=$PATH:$HOME/bin
+# Homebrew
+export PATH="/opt/homebrew/bin:$PATH"
+# Postgres
+export PATH="/opt/homebrew/opt/postgresql@10/bin:$PATH"
+# Java
+export JAVA_HOME=$JAVA_HOME
+
+
+# Silence Warning
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
+# Personalize Bash
+export HISTSIZE=5000
+export HISTFILESIZE=10000
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+txtred='\e[0;31m' # Red
+txtgrn='\e[0;32m' # Green
+bldgrn='\e[1;32m' # Bold Green
+bldpur='\e[1;35m' # Bold Purple
+txtrst='\e[0m'    # Text Reset
+emojis=("👾" "🌐" "🎲" "🌍" "🐉" "🌵")
+EMOJI=${emojis[$RANDOM % ${#emojis[@]} ]}
+print_before_the_prompt () {
+    dir=$PWD
+    home=$HOME
+    dir=${dir/"$HOME"/"~"}
+    printf "\n $txtred%s: $bldpur%s $txtgrn%s\n$txtrst" "$HOST_NAME" "$dir" "$($
+}
+PROMPT_COMMAND=print_before_the_prompt
+PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+PS1="$EMOJI >"
+fortune | cowsay -f tux
+function mkcd()
+{
+        mkdir $1 && cd $1
+}
+
+
+# Php Development Alias
+alias htdocs='cd /opt/homebrew/var/www'
+alias stphp='brew services start php'
+alias spphp='brew services stop php'
+alias stapache='brew services start httpd'
+alias spapache='brew services stop httpd'
+alias rlapache='brew services reload httpd'
+alias edconf='sudo nano /opt/homebrew/etc/httpd/httpd.conf'
+alias ttapache='/opt/homebrew/opt/httpd/bin/httpd -k start'
+
+# Postgres
+alias stpg='brew services start postgres'
+alias sppg='brew services stop postgres'
+
+# Geoserver
+alias stgeo='geoserver path/to/dir';
+
+# YTD
+alias ytd='youtube-dl -f best'
