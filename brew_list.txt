@@ -6,20 +6,10 @@ vcprompt
 git
 
 # Casks
-alfred
-iterm2
-spectacle
-the-unarchiver
-
-postman
-insomnia
-visual-studio-code
-slack
-sourcetree
-postico
-
-google-chrome		
-vlc
-whatsapp
+alfred			postman			visual-studio-code
+google-chrome		slack			vlc
+insomnia		sourcetree		whatsapp
+iterm2			spectacle
+postico			the-unarchiver
 
 			
