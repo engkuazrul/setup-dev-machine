@@ -1,0 +1,82 @@
+{
+  "explorer.openEditors.visible": 0,
+  "editor.snippetSuggestions": "top",
+  "emmet.showAbbreviationSuggestions": false,
+  "editor.formatOnPaste": false,
+  "workbench.colorTheme": "Just Black",
+  "window.zoomLevel": 1,
+  "workbench.iconTheme": "vscode-icons",
+  "editor.fontLigatures": true,
+  "terminal.integrated.fontSize": 14,
+  "files.autoSave": "off",
+  "editor.fontFamily": "Anonymous Pro",
+  "markdown.preview.fontSize": 24,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": true,
+  "eslint.enable": true,
+  // "files.exclude": { "**/.*": true },
+  "eslint.validate": [
+    {
+      "language": "vue",
+      "autoFix": true
+    },
+    {
+      "language": "typescript",
+      "autoFix": true
+    },
+    {
+      "language": "html",
+      "autoFix": true
+    },
+    {
+      "language": "javascript",
+      "autoFix": true
+    }
+  ],
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.suggestSelection": "first",
+  "liveshare.featureSet": "insiders",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "liveshare.anonymousGuestApproval": "accept",
+  "workbench.colorCustomizations": {},
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": ["comment", "comment.block"],
+        "settings": {
+          "fontStyle": "italic",
+          "foreground": "#ff1493"
+        }
+      },
+      {
+        "scope": [
+          "keyword.operator.logical",
+          "keyword.operator.arithmetic",
+          "keyword.operator.assignment",
+          "keyword.operator.bitwise"
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
+  },
+  "todo-tree.tree.showScanModeButton": false,
+  "cSpell.userWords": [
+    "deno",
+    "feathersjs",
+    "middlewares",
+    "socketio",
+    "upsert",
+    "upvote"
+  ],
+  "editor.lineHeight": 0,
+  "editor.fontSize": 17,
+  "editor.minimap.enabled": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+}
